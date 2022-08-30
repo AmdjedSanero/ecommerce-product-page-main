@@ -1,0 +1,159 @@
+/* Start Global Rules */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: "Kumbh Sans", sans-serif;
+}
+ul {
+  list-style: none;
+}
+.container {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+/* Media Queries */
+/*Small*/
+
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+
+/*Medium*/
+
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+
+/*Larg*/
+
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+/* End Global Rules */
+.head {
+  padding-top: 30px;
+  display: flex;
+  justify-content: center;
+}
+
+.head .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  padding-bottom: 15px;
+}
+.head .container::before {
+  position: absolute;
+  content: "";
+  width: calc(100% - 30px);
+  height: 1px;
+  background-color: hsl(220, 14%, 75%);
+  bottom: -15px;
+  z-index: -1;
+}
+.head .container .logo-and-list {
+  display: flex;
+  align-items: center;
+  gap: 60px;
+}
+.head .container .logo-and-list .three-bar {
+  cursor: pointer;
+  display: none;
+}
+.head .container .list ul {
+  display: flex;
+  gap: 20px;
+  color: hsl(219, 9%, 45%);
+  font-weight: 400;
+}
+
+.head .container .list ul li a {
+  text-decoration: none;
+  color: hsl(219, 9%, 45%);
+  position: relative;
+}
+.head .container .list.not-opened ul li a:hover {
+  color: hsl(220, 13%, 13%);
+  border-bottom: 2px solid hsl(26, 100%, 55%);
+  padding-bottom: 38px;
+  z-index: 2;
+}
+.head .container .cart-and-profile {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+.avatar {
+  width: 40px;
+}
+
+/* Mobile Header */
+
+@media (max-width: 768px) {
+  .head {
+    padding-top: 20px;
+  }
+  .head .container {
+    padding-bottom: 20px;
+    width: 100%;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+  .head .container::before {
+    height: 0;
+  }
+  .head .container .logo-and-list {
+    gap: 20px;
+  }
+  .head .container .logo-and-list .three-bar {
+    display: flex;
+  }
+  .head .container .list {
+    display: none;
+  }
+
+  .head .container .cart-and-profile {
+    gap: 20px;
+  }
+}
+/* End Mobile Header */
+.head .container .list.opened {
+  display: flex;
+}
+.close-bar {
+  position: absolute;
+  z-index: 20;
+  left: 0;
+  padding-left: 30px;
+  cursor: pointer;
+}
+.close-bar.none {
+  display: none;
+}
+.head .container .list.opened ul {
+  z-index: 15;
+  font-weight: bold;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  top: -20px;
+  left: 0;
+  background-color: white;
+  width: calc(65%);
+  min-height: 100vh;
+  padding-left: 30px;
+  padding-top: 80px;
+}
+.head .container .list.opened ul li a {
+  color: black;
+}
