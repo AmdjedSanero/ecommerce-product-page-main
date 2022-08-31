@@ -215,6 +215,7 @@ ul {
   display: flex;
   flex-direction: column;
   width: 400px;
+  padding-bottom: 30px;
 }
 .context .container .info .company-name {
   color: hsl(26, 100%, 55%);
@@ -222,16 +223,20 @@ ul {
   text-transform: uppercase;
   font-size: 14px;
   letter-spacing: 1px;
+  padding-bottom: 20px;
 }
 .context .container .info .title {
   color: black;
   font-weight: bold;
   text-transform: capitalize;
   font-size: 42px;
+  padding-bottom: 30px;
 }
 .context .container .info .para {
   color: hsl(219, 9%, 45%);
   font-size: 15px;
+  line-height: 1.6em;
+  padding-bottom: 20px;
 }
 .context .container .info .price-details {
   display: flex;
@@ -241,6 +246,7 @@ ul {
 .context .container .info .price-details .price {
   font-size: 28px;
   font-weight: bold;
+  padding-bottom: 10px;
 }
 .context .container .info .price-details .price-with-discount {
   font-size: 15px;
@@ -255,30 +261,45 @@ ul {
   font-weight: bold;
   color: hsl(220, 14%, 75%);
   text-decoration: line-through;
+  padding-bottom: 30px;
 }
 .context .container .info .add-to-cart {
   display: flex;
   align-items: center;
+  gap: 10px;
 }
 .context .container .info .add-to-cart .details {
   display: flex;
   align-items: center;
   background-color: hsl(223, 64%, 98%);
   width: 40%;
+  justify-content: space-between;
+  padding: 15px 20px;
+  user-select: none;
+}
+.context .container .info .add-to-cart .details .minus {
+  cursor: pointer;
+}
+.context .container .info .add-to-cart .details .plus {
+  cursor: pointer;
+}
+.context .container .info .add-to-cart .details .count {
+  font-size: 15px;
+  font-weight: 700;
 }
 .context .container .info .add-to-cart .logo-and-btn {
+  user-select: none;
   display: flex;
   align-items: center;
   background-color: hsl(26, 100%, 55%);
   width: 60%;
-  padding: 10px 0;
+  padding: 15px 0;
   border-radius: 10px;
   justify-content: center;
   gap: 10px;
   cursor: pointer;
 }
-.context .container .info .add-to-cart .logo-and-btn svg {
-}
+
 .context .container .info .add-to-cart .logo-and-btn span {
   color: white;
   font-size: 15px;
