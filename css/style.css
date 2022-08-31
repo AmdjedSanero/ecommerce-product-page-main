@@ -242,11 +242,11 @@ ul {
   display: flex;
   align-items: center;
   gap: 20px;
+  padding-bottom: 10px;
 }
 .context .container .info .price-details .price {
   font-size: 28px;
   font-weight: bold;
-  padding-bottom: 10px;
 }
 .context .container .info .price-details .price-with-discount {
   font-size: 15px;
