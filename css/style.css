@@ -279,6 +279,8 @@ ul {
 }
 .context .container .info .add-to-cart .details .minus {
   cursor: pointer;
+  position: relative;
+  top: -4px;
 }
 .context .container .info .add-to-cart .details .plus {
   cursor: pointer;
