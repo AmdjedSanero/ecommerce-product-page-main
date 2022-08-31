@@ -35,7 +35,6 @@ close_bar.addEventListener("click", function () {
   list.classList.add("not-opened");
   close_bar.classList.add("none");
 });
-
 thumbs.forEach((img) =>
   img.addEventListener("click", function () {
     for (let i = 0; i < thumbs.length; i++) {
@@ -48,6 +47,7 @@ thumbs.forEach((img) =>
       element.src = `images/image-product-${numOfThumb}.jpg`;
     });
     nextAndPrev(numOfThumb);
+    console.log(thumbs);
   })
 );
 image_productZoom.addEventListener("click", function () {
