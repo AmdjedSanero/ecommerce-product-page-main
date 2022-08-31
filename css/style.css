@@ -157,3 +157,131 @@ ul {
 .head .container .list.opened ul li a {
   color: black;
 }
+/* End Header */
+/* context Seaction */
+.context {
+  padding-top: 90px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.context .container {
+  display: flex;
+  align-items: center;
+  position: relative;
+  padding-bottom: 15px;
+  gap: 120px;
+  padding-left: 60px;
+  padding-right: 60px;
+}
+.context .container .gallery {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  padding-bottom: 15px;
+  gap: 20px;
+  max-width: 430px;
+}
+.context .container .gallery img {
+  border-radius: 20px;
+}
+.context .container .gallery .image-product {
+  max-width: 100%;
+}
+.context .container .gallery .image-product img {
+  max-width: 100%;
+  cursor: pointer;
+}
+.context .container .gallery .thumbs {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+.context .container .gallery .thumbs img {
+  border-radius: 10px;
+  cursor: pointer;
+  width: 90px;
+  position: relative;
+}
+
+.context .container .gallery .thumbs img.active {
+  border: 3px solid hsl(26, 100%, 55%);
+  opacity: 0.5;
+}
+
+.context .container .info {
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+}
+.context .container .info .company-name {
+  color: hsl(26, 100%, 55%);
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 14px;
+  letter-spacing: 1px;
+}
+.context .container .info .title {
+  color: black;
+  font-weight: bold;
+  text-transform: capitalize;
+  font-size: 42px;
+}
+.context .container .info .para {
+  color: hsl(219, 9%, 45%);
+  font-size: 15px;
+}
+.context .container .info .price-details {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.context .container .info .price-details .price {
+  font-size: 28px;
+  font-weight: bold;
+}
+.context .container .info .price-details .price-with-discount {
+  font-size: 15px;
+  font-weight: bold;
+  color: hsl(26, 100%, 55%);
+  background-color: hsl(25, 100%, 94%);
+  border-radius: 5px;
+  padding: 3px;
+}
+.context .container .info .price-without-discount {
+  font-size: 15px;
+  font-weight: bold;
+  color: hsl(220, 14%, 75%);
+  text-decoration: line-through;
+}
+.context .container .info .add-to-cart {
+  display: flex;
+  align-items: center;
+}
+.context .container .info .add-to-cart .details {
+  display: flex;
+  align-items: center;
+  background-color: hsl(223, 64%, 98%);
+  width: 40%;
+}
+.context .container .info .add-to-cart .logo-and-btn {
+  display: flex;
+  align-items: center;
+  background-color: hsl(26, 100%, 55%);
+  width: 60%;
+  padding: 10px 0;
+  border-radius: 10px;
+  justify-content: center;
+  gap: 10px;
+  cursor: pointer;
+}
+.context .container .info .add-to-cart .logo-and-btn svg {
+}
+.context .container .info .add-to-cart .logo-and-btn span {
+  color: white;
+  font-size: 15px;
+  font-weight: 700;
+}
+/* End context Seaction */
