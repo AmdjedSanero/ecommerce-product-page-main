@@ -36,7 +36,7 @@ let del;
 
 let counthtml = count.innerHTML;
 let counteur = 1;
-let numOfThumb = 1;
+let numOfThumb = 2;
 let active_cart = false;
 three_bar.addEventListener("click", function () {
   list.classList.remove("not-opened");

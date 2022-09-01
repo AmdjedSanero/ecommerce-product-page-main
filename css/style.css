@@ -8,11 +8,11 @@ html,
 body {
   font-family: "Kumbh Sans", sans-serif;
   position: relative;
-  max-width: 100%;
 }
 html,
 body {
   max-width: 100%;
+  min-height: 100vh;
   overflow-x: hidden;
 }
 ul {
@@ -290,6 +290,7 @@ ul {
   width: 40%;
   justify-content: space-between;
   padding: 15px 20px;
+  border-radius: 10px;
   user-select: none;
 }
 .context .container .info .add-to-cart .details .minus {
@@ -536,3 +537,190 @@ ul {
   display: none;
 }
 /* End Cart Data */
+/* responsive */
+@media (max-width: 990px) {
+  .context .container {
+    display: flex;
+    align-items: center;
+    position: relative;
+    padding-bottom: 15px;
+    padding-left: 60px;
+    padding-right: 60px;
+    gap: 33px;
+  }
+  .context .container .gallery {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    position: relative;
+    padding-bottom: 15px;
+    gap: 16px;
+    max-width: 300px;
+    top: 0px;
+  }
+  .context .container .gallery .thumbs img {
+    width: 60px;
+  }
+}
+@media (max-width: 768px) {
+  .context .container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    padding-bottom: 15px;
+    padding-left: 60px;
+    padding-right: 60px;
+    gap: 10px;
+  }
+  .context .container .gallery {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    position: relative;
+    padding-bottom: 15px;
+    gap: 16px;
+    max-width: 400px;
+    top: 0px;
+  }
+
+  .context .container .gallery .thumbs img {
+    width: 90px;
+  }
+}
+@media (max-width: 420px) {
+  .context {
+    padding-top: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top: 375px;
+    margin-top: 30px;
+  }
+  .context .container {
+    flex-direction: column;
+    width: 100%;
+  }
+  .context .container .gallery {
+    display: none;
+
+    min-width: 375px;
+  }
+  .context .container .gallery img {
+    border-radius: 0px;
+    min-width: 100%;
+  }
+
+  .context .container .gallery .image-product img {
+    max-width: 100%;
+  }
+  .context .container .gallery .thumbs {
+    display: none;
+  }
+  .all.active {
+    display: flex;
+    position: absolute;
+    justify-content: center;
+    align-items: flex-start;
+    width: 100%;
+    min-height: 0px;
+    z-index: 1;
+    top: 80px;
+  }
+  .all.active .gallery {
+    padding-top: 0;
+  }
+  .all.active .gallery .close {
+    display: none;
+  }
+  .all.active .gallery .thumbs {
+    display: none;
+  }
+  .all.active .gallery .image-product {
+    min-width: 375px;
+  }
+  .all.active .gallery img {
+    border-radius: 0px;
+  }
+  .all.active::before {
+    height: 0;
+    width: 0;
+  }
+  .all.active .gallery {
+    position: relative;
+  }
+  .all.active .gallery .next {
+    position: absolute;
+
+    left: 315px;
+    top: 160px;
+  }
+  .all.active .gallery .prev {
+    position: absolute;
+
+    top: 160px;
+    left: 10px;
+  }
+  .context .container .info {
+    width: 375px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 15px;
+  }
+  .context .container .info .company-name {
+    font-size: 12px;
+    letter-spacing: 1px;
+  }
+  .context .container .info .title {
+    font-size: 26px;
+    padding-bottom: 10px;
+  }
+  .context .container .info .para {
+    font-size: 15px;
+    padding-bottom: 20px;
+    padding-right: 15px;
+    width: 360px;
+  }
+  .context .container .info .price-without-discount {
+    position: absolute;
+    bottom: 140px;
+    right: 20px;
+  }
+  .context .container .info .add-to-cart {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  .context .container .info .add-to-cart .details {
+    width: 100%;
+  }
+  .context .container .info .add-to-cart .logo-and-btn {
+    width: 100%;
+  }
+  .cart-data {
+    right: 12.5px;
+    width: 350px;
+  }
+  .cart-data .data .empty {
+    left: 90px;
+  }
+  .data1 {
+    gap: 0;
+  }
+  .data1 .text {
+    padding-left: 10px;
+  }
+  .data1 .del {
+    left: 25px;
+  }
+  .checkout {
+    width: calc(100% + 25px);
+    left: 10px;
+  }
+  .count-span {
+    right: 82px;
+  }
+}
+
+/* end responsive */
