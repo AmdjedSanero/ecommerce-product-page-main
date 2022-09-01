@@ -23,8 +23,17 @@ let minus = document.querySelector(
 let count = document.querySelector(
   ".context .container .info .add-to-cart .details .count"
 );
+let cartBtn = document.querySelector(
+  ".head .container .cart-and-profile .cart"
+);
+let cart = document.querySelector(".cart-data");
+let addToCart = document.querySelector(
+  ".context .container .info .add-to-cart .logo-and-btn"
+);
+
 let counteur = 1;
 let numOfThumb = 1;
+let active_cart = false;
 three_bar.addEventListener("click", function () {
   list.classList.remove("not-opened");
   list.classList.add("opened");
@@ -97,4 +106,17 @@ minus.addEventListener("click", function () {
     counteur--;
     count.innerHTML = counteur;
   }
+});
+cartBtn.addEventListener("click", function () {
+  if (active_cart === false) {
+    cart.classList.remove("non-active");
+    console.log(active_cart);
+  } else {
+    cart.classList.add("non-active");
+    console.log(active_cart);
+  }
+  active_cart = !active_cart;
+});
+addToCart.addEventListener("click", function () {
+  
 });
