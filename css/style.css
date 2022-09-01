@@ -172,6 +172,10 @@ ul {
 .head .container .list.opened ul li a {
   color: black;
 }
+.avatar:hover {
+  border: 2px solid hsl(26, 100%, 55%);
+  border-radius: 50%;
+}
 /* End Header */
 /* context Seaction */
 .context {
@@ -386,6 +390,9 @@ ul {
   top: 10px;
   user-select: none;
 }
+.all.active .gallery .close:hover path {
+  fill: hsl(26, 100%, 55%);
+}
 .all.active .gallery .close img {
   width: 20px;
 }
@@ -538,6 +545,11 @@ ul {
 }
 /* End Cart Data */
 /* responsive */
+@media (max-width: 1060px) {
+  .cart-data {
+    right: 20px;
+  }
+}
 @media (max-width: 990px) {
   .context .container {
     display: flex;
@@ -586,6 +598,9 @@ ul {
 
   .context .container .gallery .thumbs img {
     width: 90px;
+  }
+  .cart-data {
+    right: 15px;
   }
 }
 @media (max-width: 420px) {
