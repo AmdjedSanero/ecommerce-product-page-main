@@ -147,7 +147,7 @@ ul {
 }
 .close-bar {
   position: absolute;
-  z-index: 20;
+  z-index: 500000;
   left: 0;
   padding-left: 30px;
   cursor: pointer;
@@ -453,11 +453,11 @@ ul {
   top: 25px;
 }
 .cart-data .data .empty {
-  position: relative;
-  top: 100px;
-  left: 110px;
   font-weight: bold;
   color: hsl(219, 9%, 45%);
+  padding: 85px 0;
+  position: relative;
+  left: 110px;
 }
 .cart-data .data .empty.none {
   display: none;
@@ -517,8 +517,22 @@ ul {
   cursor: pointer;
 }
 .checkout .check {
-  padding: 20px;
+  padding: 15px;
   color: white;
   font-weight: 700;
+}
+.count-span {
+  position: absolute;
+  top: 3px;
+  right: 88px;
+  font-size: 11px;
+  font-weight: 700;
+  background-color: hsl(26, 100%, 55%);
+  padding: 1px 8px;
+  border-radius: 8px;
+  color: white;
+}
+.count-span.none {
+  display: none;
 }
 /* End Cart Data */

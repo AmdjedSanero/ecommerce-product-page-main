@@ -30,7 +30,11 @@ let cart = document.querySelector(".cart-data");
 let addToCart = document.querySelector(
   ".context .container .info .add-to-cart .logo-and-btn"
 );
+let count_span = document.querySelector(".count-span");
 
+let del;
+
+let counthtml = count.innerHTML;
 let counteur = 1;
 let numOfThumb = 1;
 let active_cart = false;
@@ -102,7 +106,7 @@ plus.addEventListener("click", function () {
   count.innerHTML = counteur;
 });
 minus.addEventListener("click", function () {
-  if (count.innerHTML != 0) {
+  if (count.innerHTML != 1) {
     counteur--;
     count.innerHTML = counteur;
   }
@@ -110,13 +114,58 @@ minus.addEventListener("click", function () {
 cartBtn.addEventListener("click", function () {
   if (active_cart === false) {
     cart.classList.remove("non-active");
-    console.log(active_cart);
+    cartBtn.src = "images/icon-cart-black.svg";
   } else {
     cart.classList.add("non-active");
-    console.log(active_cart);
+    cartBtn.src = "images/icon-cart.svg";
   }
   active_cart = !active_cart;
 });
+let onlyOne = true;
 addToCart.addEventListener("click", function () {
-  
+  if (onlyOne || counteur !== count.innerHTML) {
+    let empty = document.querySelector(".cart-data .data .empty");
+
+    let cart_data = document.querySelector(".cart-data .data");
+
+    let data1 = document.createElement("div");
+    let checkout = document.createElement("div");
+    checkout.className = "checkout";
+    let check = document.createElement("span");
+    check.className = "check";
+    check.innerHTML = "Checkout";
+    checkout.appendChild(check);
+    data1.className = "data1";
+    cart_data.innerHTML = "";
+    data1.innerHTML = "";
+    cartBtn.src = "images/icon-cart-black.svg";
+
+    data1.innerHTML = `
+ <img src="images/image-product-1-thumbnail.jpg" alt="">
+  <div class="text">
+    <span class="text-title">Fall Limited Edition Sneakers</span><br>
+    <span class="total">$125.00 x ${count.innerHTML} <b class="tot">$${
+      count.innerHTML * 125.0
+    }.00</b></span>
+  </div>
+  <img class="del" src="images/icon-delete.svg" alt="">
+`;
+    count_span.classList.remove("none");
+
+    count_span.innerHTML = count.innerHTML;
+    cart_data.appendChild(data1);
+    cart_data.appendChild(checkout);
+    del = document.querySelector(".data1 .del");
+    del.addEventListener("click", function () {
+      cart_data.innerHTML = "";
+
+      let empty = document.createElement("span");
+      empty.className = "empty";
+      empty.innerHTML = "Your cart is empty";
+      cart_data.appendChild(empty);
+      count_span.classList.add("none");
+    });
+    empty.classList.add("none");
+  }
+  onlyOne = false;
 });
